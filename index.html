@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klakulator mHR</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function oblicz() {
+            var wiek = document.getElementById("wiek").value;
+            var waga = document.getElementById("waga").value;
+            var HRMAX = 210 - (0.5* wiek)- (0.022*waga) + 4;
+            document.getElementById("wynik").innerHTML=(HRMAX*1).toFixed();
+
+        }
+        function oblicz1() {
+            var wiek = document.getElementById("wiek2").value;
+            var waga = document.getElementById("waga2").value;
+            var HRMAX = 210 - (0.5* wiek)- (0.022*waga);
+            document.getElementById("wynik2").innerHTML=(HRMAX*1).toFixed();
+
+        }
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body> 
+    <h1> Kalkulator maksymalnego tętna w swoim wieku</h1>
+    <h2> TĘTNO MAKSYMALNE (HRMAX)</h2>
+    <br>
+    <h3> dla mężczyzn</h3>
+    <label for "wiek"> Podaj swój wiek:</label>
+    <input type="number" id="wiek" value=0 dir="rtl" >
+    <br>
+    <br>
+    <label for "waga"> Podaj swoją wage:</label>
+    <input type="number" id="waga" value=0 dir="rtl" >
+    <br>
+    <br>
+    <input type="button" value=" Oblicz HRMAX" onclick="oblicz()">
+    <br>
+    <br>
+    <div id="wynik"> Tu będzie obliczony twój HRMAX</div>
+<br>
+<br>
+    <h4> dla kobiet</h4>
+    
+
+    <label for "wiek2"> Podaj swój wiek:</label>
+    <input type="number" id="wiek2" value=0 dir="rtl" >
+    <br>
+    <br>
+    <label for "waga2"> Podaj swoją wage:</label>
+    <input type="number" id="waga2" value=0 dir="rtl" >
+    <br>
+    <br>
+    <input type="button" value=" Oblicz HRMAX" onclick="oblicz1()">
+    <br>
+    <br>
+    <div id="wynik2"> Tu będzie obliczony twój HRMAX</div>
+</body>
+</html>
